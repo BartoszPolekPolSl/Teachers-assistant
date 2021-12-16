@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Teacher\'s assistant</string>
+    <string name="grade_book">Dziennik</string>
+    <string name="add_subject">Dodaj przedmiot</string>
+    <string name="add_student">Dodaj ucznia</string>
+    <string name="settings">Ustawienia</string>
 </resources>
