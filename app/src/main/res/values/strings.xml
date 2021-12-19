@@ -10,4 +10,8 @@
     <string name="subject_short">Skrót nazwy</string>
     <string name="day">Dzień</string>
     <string name="hour_block">Blok godzinowy</string>
+    <string name="first_name">Imię</string>
+    <string name="last_name">Nazwisko</string>
+    <string name="id_number">Numer legitymacji</string>
+    <string name="assign_subject_to_student">Przypisz przedmioty do ucznia</string>
 </resources>

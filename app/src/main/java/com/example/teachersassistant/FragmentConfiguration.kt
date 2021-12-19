@@ -12,7 +12,9 @@ class FragmentConfiguration:Fragment(R.layout.fragment_configuration) {
 
         (view.findViewById<Button>(R.id.button_add_subject)).setOnClickListener{
             it.findNavController().navigate(R.id.action_fragmentConfiguration_to_fragmentAddSubject)
-
+        }
+        (view.findViewById<Button>(R.id.button_add_student)).setOnClickListener{
+            it.findNavController().navigate(R.id.action_fragmentConfiguration_to_fragmentAddStudent)
         }
 
 

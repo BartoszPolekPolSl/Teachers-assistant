@@ -22,7 +22,8 @@
                 android:id="@+id/txt_input_subject_name"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:hint="@string/subject_name" />
+                android:hint="@string/subject_name"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -51,7 +52,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/day"
-
             android:inputType="none" />
 
 </com.google.android.material.textfield.TextInputLayout>
@@ -89,13 +89,17 @@
             android:layout_weight="1"
             android:timePickerMode="spinner" />
     </LinearLayout>
+
     <Button
+        android:id="@+id/button_add_subject"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:icon="@drawable/ic_baseline_add_24"
         android:text="@string/add_subject"
-        style="@style/Widget.MaterialComponents.Button"
-    />
+        android:textSize="18sp"
+        app:icon="@drawable/ic_baseline_add_24"
+        app:iconGravity="textStart"
+        app:iconSize="30dp" />
 
 
 </LinearLayout>
