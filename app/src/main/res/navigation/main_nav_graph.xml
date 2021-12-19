@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/fragmentGradeBook">
+
+    <fragment
+        android:id="@+id/fragmentGradeBook"
+        android:name="com.example.teachersassistant.FragmentGradeBook"
+        android:label="FragmentGradeBook" />
+    <fragment
+        android:id="@+id/fragmentConfigurationHost"
+        android:name="com.example.teachersassistant.FragmentConfigurationHost"
+        android:label="FragmentConfigurationHost" />
+    <fragment
+        android:id="@+id/fragmentAddGrade"
+        android:name="com.example.teachersassistant.FragmentAddGrade"
+        android:label="FragmentAddGrade" />
+</navigation>

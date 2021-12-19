@@ -8,9 +8,14 @@
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mainNavHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"/>
+        android:layout_weight="8"
+        app:navGraph="@navigation/main_nav_graph"
+        app:defaultNavHost="true"
+        />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
@@ -18,6 +23,8 @@
         android:layout_width="match_parent"
         app:labelVisibilityMode="labeled"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+
+        />
 
 </LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/fragmentConfiguration">
+    <fragment
+        android:id="@+id/fragmentConfiguration"
+        android:name="com.example.teachersassistant.FragmentConfiguration"
+        android:label="FragmentConfiguration" >
+        <action
+            android:id="@+id/action_fragmentConfiguration_to_fragmentAddSubject"
+            app:destination="@id/fragmentAddSubject" />
+        <action
+            android:id="@+id/action_fragmentConfiguration_to_fragmentAddStudent"
+            app:destination="@id/fragmentAddStudent" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddStudent"
+        android:name="com.example.teachersassistant.FragmentAddStudent"
+        android:label="FragmentAddStudent" />
+    <fragment
+        android:id="@+id/fragmentAddSubject"
+        android:name="com.example.teachersassistant.FragmentAddSubject"
+        android:label="FragmentAddSubject" />
+</navigation>

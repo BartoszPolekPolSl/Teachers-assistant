@@ -4,4 +4,10 @@
     <string name="add_subject">Dodaj przedmiot</string>
     <string name="add_student">Dodaj ucznia</string>
     <string name="settings">Ustawienia</string>
+    <string name="configuration">Konfiguracja</string>
+    <string name="add_grade">Dodaj ocenę</string>
+    <string name="subject_name">Nazwa przedmiotu</string>
+    <string name="subject_short">Skrót nazwy</string>
+    <string name="day">Dzień</string>
+    <string name="hour_block">Blok godzinowy</string>
 </resources>
