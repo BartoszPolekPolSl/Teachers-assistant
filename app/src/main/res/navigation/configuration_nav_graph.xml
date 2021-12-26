@@ -6,7 +6,7 @@
     app:startDestination="@id/fragmentConfiguration">
     <fragment
         android:id="@+id/fragmentConfiguration"
-        android:name="com.example.teachersassistant.FragmentConfiguration"
+        android:name="com.example.teachersassistant.fragments.FragmentConfiguration"
         android:label="FragmentConfiguration" >
         <action
             android:id="@+id/action_fragmentConfiguration_to_fragmentAddSubject"
@@ -17,10 +17,10 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentAddStudent"
-        android:name="com.example.teachersassistant.FragmentAddStudent"
+        android:name="com.example.teachersassistant.fragments.FragmentAddStudent"
         android:label="FragmentAddStudent" />
     <fragment
         android:id="@+id/fragmentAddSubject"
-        android:name="com.example.teachersassistant.FragmentAddSubject"
+        android:name="com.example.teachersassistant.fragments.FragmentAddSubject"
         android:label="FragmentAddSubject" />
 </navigation>

@@ -101,5 +101,4 @@
         app:iconGravity="textStart"
         app:iconSize="30dp" />
 
-
 </LinearLayout>
