@@ -1,28 +1,23 @@
 package com.example.teachersassistant.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.Button
-import android.widget.TimePicker
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import com.example.teachersassistant.R
 import com.example.teachersassistant.TeachersAssistantApplication
-import com.example.teachersassistant.data.viewmodel.AddSubjectViewModel
-import com.example.teachersassistant.data.viewmodel.AddSubjectViewModelFactory
+import com.example.teachersassistant.data.viewmodels.AddSubjectViewModel
+import com.example.teachersassistant.data.viewmodels.AddSubjectViewModelFactory
 import com.example.teachersassistant.databinding.FragmentAddSubjectBinding
 
-class FragmentAddSubject : Fragment() {
+class AddSubjectFragment : Fragment() {
     private val days = listOf("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek")
     private val viewModel: AddSubjectViewModel by viewModels {
         AddSubjectViewModelFactory(
-            (activity?.application as TeachersAssistantApplication).database.subjectDao()
+            (activity?.application as TeachersAssistantApplication).database.teachersAssistantDao()
         )
     }
     private var _binding: FragmentAddSubjectBinding? = null
@@ -45,6 +40,11 @@ class FragmentAddSubject : Fragment() {
                 "${binding.timePickerStart.hour}:${binding.timePickerStart.minute}",
                 "${binding.timePickerEnd.hour}:${binding.timePickerEnd.minute}"
             )
+            Toast.makeText(
+                context,
+                "Pomyślnie dodano przedmiot: ${binding.txtInputSubjectName.text.toString()}",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 

@@ -7,14 +7,14 @@
 
     <fragment
         android:id="@+id/fragmentGradeBook"
-        android:name="com.example.teachersassistant.fragments.FragmentGradeBook"
+        android:name="com.example.teachersassistant.fragments.GradeBookFragment"
         android:label="FragmentGradeBook" />
     <fragment
         android:id="@+id/fragmentConfigurationHost"
-        android:name="com.example.teachersassistant.fragments.FragmentConfigurationHost"
+        android:name="com.example.teachersassistant.fragments.ConfigurationHostFragment"
         android:label="FragmentConfigurationHost" />
     <fragment
         android:id="@+id/fragmentAddGrade"
-        android:name="com.example.teachersassistant.fragments.FragmentAddGrade"
+        android:name="com.example.teachersassistant.fragments.AddGradeFragment"
         android:label="FragmentAddGrade" />
 </navigation>

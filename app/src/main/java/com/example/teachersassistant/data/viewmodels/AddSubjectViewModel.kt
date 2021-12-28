@@ -1,13 +1,14 @@
-package com.example.teachersassistant.data.viewmodel
+package com.example.teachersassistant.data.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.teachersassistant.data.SubjectDao
+import com.example.teachersassistant.data.TeachersAssistantDao
 import com.example.teachersassistant.data.model.Subject
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class AddSubjectViewModel(private val subjectDao: SubjectDao) : ViewModel() {
+class AddSubjectViewModel(private val teachersAssistantDao: TeachersAssistantDao) : ViewModel() {
 
     fun addNewSubject(
         subjectName: String,
@@ -27,8 +28,8 @@ class AddSubjectViewModel(private val subjectDao: SubjectDao) : ViewModel() {
     }
 
     private fun insertSubject(subject: Subject) {
-        viewModelScope.launch {
-            subjectDao.insertSubject(subject)
+        viewModelScope.launch(Dispatchers.IO) {
+            teachersAssistantDao.insertSubject(subject)
         }
     }
 
@@ -41,11 +42,12 @@ class AddSubjectViewModel(private val subjectDao: SubjectDao) : ViewModel() {
 
 }
 
-class AddSubjectViewModelFactory(private val subjectDao: SubjectDao) : ViewModelProvider.Factory {
+class AddSubjectViewModelFactory(private val teachersAssistantDao: TeachersAssistantDao) :
+    ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(AddSubjectViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
-            return AddSubjectViewModel(subjectDao) as T
+            return AddSubjectViewModel(teachersAssistantDao) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

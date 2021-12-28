@@ -7,17 +7,15 @@ import androidx.room.RoomDatabase
 import com.example.teachersassistant.data.model.Grade
 import com.example.teachersassistant.data.model.Student
 import com.example.teachersassistant.data.model.Subject
-import com.example.teachersassistant.data.model.SubjectStudentCrossRef
+import com.example.teachersassistant.data.model.SubjectStudentLink
 
 @Database(
-    entities = [Grade::class, Subject::class, Student::class, SubjectStudentCrossRef::class],
-    version = 1,
+    entities = [Grade::class, Subject::class, Student::class, SubjectStudentLink::class],
+    version = 4,
     exportSchema = false
 )
 abstract class TeachersAssistantDatabase : RoomDatabase() {
-    //abstract fun gradeDao():GradeDao
-    //abstract fun studentDao():StudentDao
-    abstract fun subjectDao(): SubjectDao
+    abstract fun teachersAssistantDao(): TeachersAssistantDao
 
     companion object {
         @Volatile

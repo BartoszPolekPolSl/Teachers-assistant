@@ -9,7 +9,7 @@ import java.sql.Time
 data class Subject(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "subject_id")
-    val subjectId: Int = 0,
+    val subjectId: Long = 0L,
     val name: String,
     @ColumnInfo(name = "short_name")
     val shortName: String,

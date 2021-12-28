@@ -14,5 +14,5 @@ data class Student(
     @ColumnInfo(name = "last_name")
     val lastName: String,
     @ColumnInfo(name = "id_card_number")
-    val cardIdNumber: Int
+    val cardIdNumber: String
 )
