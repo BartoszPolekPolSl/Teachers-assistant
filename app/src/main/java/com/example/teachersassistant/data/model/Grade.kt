@@ -22,7 +22,7 @@ data class Grade(
     @ColumnInfo(name = "student_id")
     val studentId: Long,
     @ColumnInfo(name = "subject_id")
-    val subjectId: Int,
+    val subjectId: Long,
     val grade: Float,
     val note: String
 )

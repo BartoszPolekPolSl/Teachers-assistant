@@ -20,16 +20,26 @@
     <fragment
         android:id="@+id/fragmentAddGrade"
         android:name="com.example.teachersassistant.fragments.AddGradeFragment"
-        android:label="FragmentAddGrade" />
+        android:label="FragmentAddGrade">
+        <argument
+            android:name="studentId"
+            app:argType="long" />
+        <argument
+            android:name="subjectId"
+            app:argType="long" />
+    </fragment>
     <fragment
         android:id="@+id/studentListFragment"
         android:name="com.example.teachersassistant.fragments.StudentListFragment"
         android:label="StudentListFragment">
         <argument
-            android:name="studentId"
+            android:name="subjectId"
             app:argType="long" />
         <action
             android:id="@+id/action_studentListFragment_self"
             app:destination="@id/studentListFragment" />
+        <action
+            android:id="@+id/action_studentListFragment_to_fragmentAddGrade"
+            app:destination="@id/fragmentAddGrade" />
     </fragment>
 </navigation>

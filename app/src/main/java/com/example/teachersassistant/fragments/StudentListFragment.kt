@@ -20,6 +20,7 @@ import com.example.teachersassistant.data.viewmodels.StudentsListViewModel
 import com.example.teachersassistant.databinding.GradeBookFragmentBinding
 import com.example.teachersassistant.databinding.StudentListFragmentBinding
 import android.R
+import android.widget.ArrayAdapter
 
 import androidx.appcompat.app.AppCompatActivity
 
@@ -29,7 +30,7 @@ class StudentListFragment : Fragment() {
     private val viewModel: StudentsListViewModel by viewModels {
         StudentListViewModelFactory(
             (activity?.application as TeachersAssistantApplication).database.teachersAssistantDao(),
-            navigationArgs.studentId
+            navigationArgs.subjectId
         )
     }
     private val sideNavBarViewModel: GradeBookViewModel by activityViewModels {
@@ -53,7 +54,14 @@ class StudentListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = StudentListAdapter()
+        val adapter = StudentListAdapter {
+            val action =
+                StudentListFragmentDirections.actionStudentListFragmentToFragmentAddGrade(
+                    it.studentId,
+                    navigationArgs.subjectId
+                )
+            this.findNavController().navigate(action)
+        }
         binding.recyclerviewStudents.layoutManager = LinearLayoutManager(this.context)
         binding.recyclerviewStudents.adapter = adapter
         viewModel.studentsList.observe(viewLifecycleOwner) {
@@ -70,6 +78,7 @@ class StudentListFragment : Fragment() {
         sideNavBarViewModel.allSubjects.observe(viewLifecycleOwner,
             { adapter.notifyDataSetChanged() }
         )
+
     }
 
     override fun onDestroyView() {

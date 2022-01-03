@@ -21,6 +21,7 @@
         tools:text="Nazwisko" />
 
     <ImageButton
+        android:id="@+id/button_add_grade"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"

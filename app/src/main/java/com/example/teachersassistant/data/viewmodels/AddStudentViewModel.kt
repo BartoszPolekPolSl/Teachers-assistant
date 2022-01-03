@@ -20,7 +20,7 @@ class AddStudentViewModel(private val teachersAssistantDao: TeachersAssistantDao
         idCard: String,
         subjectList: MutableList<Subject?>
     ) {
-        val newStudent = Student(firstName = firstName, lastName = lastName, cardIdNumber = idCard)
+        val newStudent = Student(firstName = firstName, lastName = lastName, idCardNumber = idCard)
         insertStudentWithSubjects(newStudent, subjectList)
     }
 

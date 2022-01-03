@@ -6,10 +6,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teachersassistant.data.model.Student
+import com.example.teachersassistant.data.model.Subject
 import com.example.teachersassistant.databinding.StudentListItemBinding
 
 
-class StudentListAdapter :
+class StudentListAdapter(private val onItemClicked: (Student) -> Unit) :
     ListAdapter<Student, StudentListAdapter.StudentListViewHolder>(DiffCallback) {
     companion object {
         private val DiffCallback = object : DiffUtil.ItemCallback<Student>() {
@@ -23,11 +24,12 @@ class StudentListAdapter :
         }
     }
 
-    class StudentListViewHolder(private var binding: StudentListItemBinding) :
+    inner class StudentListViewHolder(private var binding: StudentListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(student: Student) {
             binding.txtInputStudentFirstName.text = student.firstName
             binding.txtInputStudentLastName.text = student.lastName
+            binding.buttonAddGrade.setOnClickListener { onItemClicked(student) }
         }
     }
 

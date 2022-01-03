@@ -4,10 +4,7 @@
         android:title="@string/grade_book"
         android:icon="@drawable/ic_baseline_library_books_24"/>
 
-    <item android:id="@+id/fragmentAddGrade"
-        android:icon="@drawable/ic_baseline_mode_24"
-        android:title="@string/add_grade"
-        />
+
     <item android:id="@+id/fragmentConfigurationHost"
         android:title="@string/configuration"
         android:icon="@drawable/ic_baseline_settings_24"/>
