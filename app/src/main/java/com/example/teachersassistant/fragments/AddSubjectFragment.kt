@@ -11,7 +11,8 @@ import androidx.fragment.app.viewModels
 import com.example.teachersassistant.TeachersAssistantApplication
 import com.example.teachersassistant.data.viewmodels.AddSubjectViewModel
 import com.example.teachersassistant.data.viewmodels.AddSubjectViewModelFactory
-import com.example.teachersassistant.databinding.FragmentAddSubjectBinding
+import com.example.teachersassistant.databinding.AddSubjectFragmentBinding
+
 
 class AddSubjectFragment : Fragment() {
     private val days = listOf("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek")
@@ -20,7 +21,7 @@ class AddSubjectFragment : Fragment() {
             (activity?.application as TeachersAssistantApplication).database.teachersAssistantDao()
         )
     }
-    private var _binding: FragmentAddSubjectBinding? = null
+    private var _binding: AddSubjectFragmentBinding? = null
     private val binding get() = _binding!!
 
     private fun isEntryValid(): Boolean {
@@ -53,7 +54,7 @@ class AddSubjectFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentAddSubjectBinding.inflate(inflater, container, false)
+        _binding = AddSubjectFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

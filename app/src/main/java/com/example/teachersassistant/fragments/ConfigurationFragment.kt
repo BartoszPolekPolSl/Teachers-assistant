@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.teachersassistant.R
 
-class ConfigurationFragment : Fragment(R.layout.fragment_configuration) {
+class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

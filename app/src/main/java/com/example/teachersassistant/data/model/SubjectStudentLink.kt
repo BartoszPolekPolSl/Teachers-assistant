@@ -20,6 +20,6 @@ import androidx.room.ForeignKey
 data class SubjectStudentLink(
     @ColumnInfo(name = "student_id")
     val studentId: Long,
-    @ColumnInfo(name = "subject_id")
+    @ColumnInfo(name = "subject_id", index = true)
     val subjectId: Long
 )

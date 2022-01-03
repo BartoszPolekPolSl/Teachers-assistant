@@ -13,7 +13,7 @@ import com.example.teachersassistant.TeachersAssistantApplication
 import com.example.teachersassistant.adapters.AddStudentListAdapter
 import com.example.teachersassistant.data.viewmodels.AddStudentViewModelFactory
 import com.example.teachersassistant.data.viewmodels.AddStudentViewModel
-import com.example.teachersassistant.databinding.FragmentAddStudentBinding
+import com.example.teachersassistant.databinding.AddStudentFragmentBinding
 
 
 class AddStudentFragment : Fragment() {
@@ -24,7 +24,7 @@ class AddStudentFragment : Fragment() {
         )
     }
     private lateinit var adapter: AddStudentListAdapter
-    private var _binding: FragmentAddStudentBinding? = null
+    private var _binding: AddStudentFragmentBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -32,7 +32,7 @@ class AddStudentFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentAddStudentBinding.inflate(inflater, container, false)
+        _binding = AddStudentFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

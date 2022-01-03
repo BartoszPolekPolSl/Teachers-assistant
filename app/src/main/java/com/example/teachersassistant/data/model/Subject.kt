@@ -2,8 +2,9 @@ package com.example.teachersassistant.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
-import java.sql.Time
+
 
 @Entity(tableName = "subjects_table")
 data class Subject(

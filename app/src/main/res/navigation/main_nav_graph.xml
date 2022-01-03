@@ -8,7 +8,11 @@
     <fragment
         android:id="@+id/fragmentGradeBook"
         android:name="com.example.teachersassistant.fragments.GradeBookFragment"
-        android:label="FragmentGradeBook" />
+        android:label="Dizennik ocen">
+        <action
+            android:id="@+id/action_fragmentGradeBook_to_studentListFragment"
+            app:destination="@id/studentListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentConfigurationHost"
         android:name="com.example.teachersassistant.fragments.ConfigurationHostFragment"
@@ -17,4 +21,15 @@
         android:id="@+id/fragmentAddGrade"
         android:name="com.example.teachersassistant.fragments.AddGradeFragment"
         android:label="FragmentAddGrade" />
+    <fragment
+        android:id="@+id/studentListFragment"
+        android:name="com.example.teachersassistant.fragments.StudentListFragment"
+        android:label="StudentListFragment">
+        <argument
+            android:name="studentId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_studentListFragment_self"
+            app:destination="@id/studentListFragment" />
+    </fragment>
 </navigation>

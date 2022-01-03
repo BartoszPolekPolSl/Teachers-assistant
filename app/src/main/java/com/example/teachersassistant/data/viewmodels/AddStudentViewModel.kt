@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class AddStudentViewModel(private val teachersAssistantDao: TeachersAssistantDao) : ViewModel() {
 
-    var allSubjects: LiveData<List<Subject>> = teachersAssistantDao.getAllSubjects()
+    val allSubjects: LiveData<List<Subject>> = teachersAssistantDao.getAllSubjects()
 
     fun addNewStudentWithSubject(
         firstName: String,

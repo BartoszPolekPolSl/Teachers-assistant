@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.teachersassistant.data.model.Student
 import com.example.teachersassistant.data.model.Subject
+import com.example.teachersassistant.data.model.SubjectWithStudents
 import com.example.teachersassistant.data.model.SubjectWithStudentsAndGrades
 
 @Dao
@@ -28,4 +29,9 @@ interface TeachersAssistantDao {
 
     @Query("SELECT * FROM subjects_table")
     fun getAllSubjects(): LiveData<List<Subject>>
+
+
+    @Transaction
+    @Query("SELECT * FROM subjects_table WHERE subject_id=:subjectId")
+    fun getSubjectWithStudents(subjectId: Long): LiveData<List<SubjectWithStudents>>
 }
