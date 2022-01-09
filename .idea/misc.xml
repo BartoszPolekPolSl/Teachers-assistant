@@ -16,6 +16,8 @@
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/add_student.xml" value="0.226171875" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/add_student_fragment.xml" value="0.198828125" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/add_subject_fragment.xml" value="0.198828125" />
+        <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/configuration_fragment.xml" value="0.166015625" />
+        <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/configuration_host_fragment.xml" value="0.166015625" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/fragment_add_grade.xml" value="0.275" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/fragment_add_student.xml" value="0.25" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/fragment_add_subject.xml" value="0.226171875" />
@@ -26,6 +28,8 @@
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/fragment_settings.xml" value="0.226171875" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/grade_book_fragment.xml" value="0.198828125" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/grade_book_item.xml" value="0.19" />
+        <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/grade_list_fragment.xml" value="0.166015625" />
+        <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/grade_list_item.xml" value="0.166015625" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/simple_list_item_1.xml" value="0.23189890710382513" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/student_add_grade.xml" value="0.211328125" />
         <entry key="..\:/Studia/Sem5/Android/Projekt1/app/src/main/res/layout/student_item.xml" value="0.21379781420765026" />

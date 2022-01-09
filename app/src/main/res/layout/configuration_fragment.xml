@@ -38,4 +38,20 @@
         app:layout_constraintTop_toBottomOf="@id/button_add_subject"
         app:layout_constraintVertical_bias="0.050000012" />
 
+    <Button
+        android:id="@+id/button_clear_DB"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wyczyść bazę"
+        android:textSize="20sp"
+        app:icon="@drawable/ic_baseline_clear_24"
+        app:iconPadding="17dp"
+        app:iconSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_add_student"
+        app:layout_constraintVertical_bias="0.050000012" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

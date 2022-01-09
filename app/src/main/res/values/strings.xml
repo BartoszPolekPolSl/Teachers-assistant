@@ -16,4 +16,5 @@
     <string name="assign_subject_to_student">Przypisz przedmioty do ucznia</string>
     <string name="select_grade">Wybierze ocenę</string>
     <string name="note">Notatka</string>
+    <string name="grade">Ocena</string>
 </resources>

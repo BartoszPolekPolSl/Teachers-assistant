@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.teachersassistant.TeachersAssistantApplication
@@ -43,13 +44,32 @@ class GradeBookFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val adapter = SideNavBarListAdapter(viewModel.allSubjects) {
             val action =
-                GradeBookFragmentDirections.actionFragmentGradeBookToStudentListFragment(it.subjectId)
+                GradeBookFragmentDirections.actionFragmentGradeBookToStudentListFragment(
+                    it.subjectId,
+                    it.name,
+                    it.day,
+                    "${it.startTime} - ${it.endTime}"
+                )
             this.findNavController().navigate(action)
         }
         binding.recyclerviewSideNavbar.layoutManager = LinearLayoutManager(this.context)
         binding.recyclerviewSideNavbar.adapter = adapter
         viewModel.allSubjects.observe(viewLifecycleOwner,
-            { adapter.notifyDataSetChanged() }
+            {
+                if (it.isNotEmpty()) {
+                    val action =
+                        GradeBookFragmentDirections.actionFragmentGradeBookToStudentListFragment(
+                            it.get(
+                                0
+                            ).subjectId,
+                            it.get(0).name,
+                            it.get(0).day,
+                            "${it.get(0).startTime} - ${it.get(0).endTime}"
+                        )
+                    this.findNavController().navigate(action)
+                }
+                adapter.notifyDataSetChanged()
+            }
         )
     }
 

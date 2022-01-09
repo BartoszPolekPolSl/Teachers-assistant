@@ -11,7 +11,7 @@ import com.example.teachersassistant.data.model.SubjectStudentLink
 
 @Database(
     entities = [Grade::class, Subject::class, Student::class, SubjectStudentLink::class],
-    version = 8,
+    version = 9,
     exportSchema = false
 )
 abstract class TeachersAssistantDatabase : RoomDatabase() {

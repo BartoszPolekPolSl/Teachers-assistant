@@ -30,10 +30,13 @@ interface TeachersAssistantDao {
     @Query("SELECT * FROM subjects_table")
     fun getAllSubjects(): LiveData<List<Subject>>
 
+    @Query("SELECT * FROM grades_table WHERE student_id=:studentId AND subject_id=:subjectId")
+    fun getStudentGrades(studentId: Long, subjectId: Long): LiveData<List<Grade>>
+
     @Query("SELECT * FROM students_table WHERE student_id=:studentId")
     fun getStudent(studentId: Long): LiveData<List<Student>>
 
     @Transaction
     @Query("SELECT * FROM subjects_table WHERE subject_id=:subjectId")
-    fun getSubjectWithStudents(subjectId: Long): LiveData<List<SubjectWithStudents>>
+    fun getSubjectWithStudents(subjectId: Long): LiveData<SubjectWithStudents>
 }

@@ -11,7 +11,7 @@ class StudentsListViewModel(
     private val teachersAssistantDao: TeachersAssistantDao,
     private val subjectId: Long
 ) : ViewModel() {
-    val studentsList: LiveData<List<SubjectWithStudents>> =
+    val studentList: LiveData<SubjectWithStudents> =
         teachersAssistantDao.getSubjectWithStudents(subjectId)
 
 }

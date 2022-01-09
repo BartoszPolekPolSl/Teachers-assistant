@@ -41,5 +41,34 @@
         <action
             android:id="@+id/action_studentListFragment_to_fragmentAddGrade"
             app:destination="@id/fragmentAddGrade" />
+        <argument
+            android:name="subjectName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentListFragment_to_gradeListFragment"
+            app:destination="@id/gradeListFragment" />
+        <argument
+            android:name="subjectDay"
+            app:argType="string" />
+        <argument
+            android:name="subjectTime"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gradeListFragment"
+        android:name="com.example.teachersassistant.fragments.GradeListFragment"
+        android:label="GradeListFragment">
+        <argument
+            android:name="studentId"
+            app:argType="long" />
+        <argument
+            android:name="subjectId"
+            app:argType="long" />
+        <argument
+            android:name="studentName"
+            app:argType="string" />
+        <argument
+            android:name="studentIdCard"
+            app:argType="string" />
     </fragment>
 </navigation>

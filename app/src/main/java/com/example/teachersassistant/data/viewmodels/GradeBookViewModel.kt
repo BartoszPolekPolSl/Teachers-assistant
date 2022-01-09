@@ -8,7 +8,6 @@ import com.example.teachersassistant.data.model.Subject
 
 class GradeBookViewModel(private val teachersAssistantDao: TeachersAssistantDao) : ViewModel() {
     val allSubjects: LiveData<List<Subject>> = teachersAssistantDao.getAllSubjects()
-
 }
 
 class GradeBookViewModelFactory(private val teachersAssistantDao: TeachersAssistantDao) :

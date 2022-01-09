@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.teachersassistant.TeachersAssistantApplication
@@ -68,6 +69,7 @@ class AddSubjectFragment : Fragment() {
         binding.buttonAddSubject.setOnClickListener {
             addNewSubject()
         }
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = "Dodaj przedmiot"
     }
 
     override fun onDestroyView() {
